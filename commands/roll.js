@@ -34,6 +34,11 @@ exports.run = (client, message, args) => {
         }
     }
 
+    let totalSuccessPoints = 0;
+    successArr.forEach(function(num){
+        totalSuccessPoints += num; //sum or total of success points
+    })
     message.channel.send("Roll outcomes in order: " + diceArr.join(" ")).catch(console.error);
     message.channel.send("Success points: " + successArr.join(" ")).catch(console.error);
+    message.channel.send("Total success score: " + totalSuccessPoints).catch(console.error);
 }
