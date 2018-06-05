@@ -1,6 +1,10 @@
 exports.run = (client, message, args => {
-    if(args === "blue") { 
-        await client.replace_roles(message.author, discord.Object('')) //not sure what to put here yet...role ID?
+    if(args === "red") { 
+        client.addRole(message.author, discord.Object('453643289988562944')) //role ID of Valor
+        message.channel.send("RED team Valor!").catch(console.error);
+    } if(args === "white") {
+        client.replace_roles(message.author, discord.addRole('453641794467659776')) //role ID of everyone
+        message.channel.send("White").catch(console.error);
     }
 })
 
